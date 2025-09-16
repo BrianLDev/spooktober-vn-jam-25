@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bhm100784r6nd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4p3fh"]
+content_margin_left = 40.0
+content_margin_top = 20.0
+content_margin_right = 40.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 0.5882353)
+border_width_left = 2
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.1764706, 0.3529412, 0.7411765, 0.5882353)
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_4p3fh")
+RichTextLabel/font_sizes/bold_font_size = 40
+RichTextLabel/font_sizes/bold_italics_font_size = 40
+RichTextLabel/font_sizes/italics_font_size = 40
+RichTextLabel/font_sizes/mono_font_size = 40
+RichTextLabel/font_sizes/normal_font_size = 40

@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://oeg865vu38kv"]
+[gd_scene load_steps=3 format=3 uid="uid://oeg865vu38kv"]
+
+[ext_resource type="Theme" uid="uid://bhm100784r6nd" path="res://UI/dialog_ui.tres" id="1_oixmp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oixmp"]
+font_size = 25
 
 [node name="DialogUI" type="Control"]
 layout_mode = 3
@@ -7,6 +12,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_oixmp")
+
+[node name="SpeakerBox" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = -150.0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="SpeakerBox"]
+color = Color(0.1764706, 0.3529412, 0.7411765, 0.5882353)
+polygon = PackedVector2Array(0, 0, 180, 0, 200, 50, 0, 50)
+
+[node name="Name" type="Label" parent="SpeakerBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_oixmp")
 
 [node name="DialogBox" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(0, 150)
@@ -18,16 +55,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -200.0
-offset_right = 200.0
-offset_bottom = -150.0
-grow_vertical = 0
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]Lorem[/b] ipsum [i]dolor[/i] sit [wave]amet[/wave], consectetur [shake]adipiscing[/shake] elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
