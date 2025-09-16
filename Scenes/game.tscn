@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cekdi0aldfjmr"]
+[gd_scene load_steps=4 format=3 uid="uid://cekdi0aldfjmr"]
 
 [ext_resource type="PackedScene" uid="uid://bmfxfl6wvpesc" path="res://Scenes/background.tscn" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://b2c1pn6p2vao3" path="res://Scenes/character.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://oeg865vu38kv" path="res://Scenes/dialog_ui.tscn" id="3_wrm1d"]
 
 [node name="Game" type="Node2D"]
 
@@ -23,5 +24,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Character" parent="CanvasLayer/Control" instance=ExtResource("2_qxrlw")]
-position = Vector2(0, -267)
-scale = Vector2(0.3, 0.3)
+position = Vector2(0, -370)
+scale = Vector2(0.4, 0.4)
+
+[node name="DialogUI" parent="CanvasLayer" instance=ExtResource("3_wrm1d")]
