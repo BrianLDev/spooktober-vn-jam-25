@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2c1pn6p2vao3"]
+
+[ext_resource type="Texture2D" uid="uid://bnci37uheit4l" path="res://Images/Ace character.png" id="1_0y7nr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jo2ib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0y7nr")
+}],
+"loop": true,
+"name": &"objection",
+"speed": 5.0
+}]
+
+[node name="Character" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jo2ib")
+animation = &"objection"
